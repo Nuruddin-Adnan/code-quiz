@@ -1,0 +1,35 @@
+.header .navbar-brand img {
+    max-width: 40px;
+    margin-right: 5px;
+}
+
+.header .navbar-brand {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header .navbar-nav .nav-link {
+    font-weight: 500;
+    position: relative;
+}
+
+.header .navbar-nav .nav-link.active {
+    color: #04a1a1;
+}
+
+.header .navbar-nav .nav-link.active::before {
+    content: '';
+    width: 70px;
+    height: 1px;
+    background-color: #04a1a1;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 991px) {
+    .header .navbar-nav .nav-link.active::before {
+        width: 100%;
+    }
+}

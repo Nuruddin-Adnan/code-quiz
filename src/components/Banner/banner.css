@@ -1,0 +1,17 @@
+.banner {
+    background: cyan url('https://media.istockphoto.com/id/1364994903/video/animation-of-question-marks-on-green-background.jpg?s=640x640&k=20&c=Fdr74s-FYQeLf8yYOFHpbK9f0TGp9E6B8nNiPawQtVc=');
+    padding: 60px 30px;
+    position: relative;
+    z-index: 0;
+}
+
+.banner::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
