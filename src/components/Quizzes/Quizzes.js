@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Quiz from '../Quiz/Quiz';
+
+export const HandleCheckedAnswerContext = createContext();
 
 const Quizzes = () => {
     const loadedData = useLoaderData();
@@ -36,15 +38,17 @@ const Quizzes = () => {
     }
 
     return (
-        <div className='container py-5'>
-            <div className="col-lg-8 mx-auto">
-                <h2 className='text-center text-info mb-4'>Quiz of {name}({questions.length})</h2>
-                <div className="quiz-container">
-                    {questions.map(question => <Quiz key={question.id} question={question} handleCheckedAnswer={handleCheckedAnswer}></Quiz>)}
+        <HandleCheckedAnswerContext.Provider value={handleCheckedAnswer}>
+            <div className='container py-5'>
+                <div className="col-lg-8 mx-auto">
+                    <h2 className='text-center text-info mb-4'>Quiz of {name}({questions.length})</h2>
+                    <div className="quiz-container">
+                        {questions.map(question => <Quiz key={question.id} question={question}></Quiz>)}
+                    </div>
                 </div>
+                <ToastContainer />
             </div>
-            <ToastContainer />
-        </div>
+        </HandleCheckedAnswerContext.Provider>
     );
 };
 

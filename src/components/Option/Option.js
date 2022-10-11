@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { HandleCheckedAnswerContext } from '../Quizzes/Quizzes';
 import './option.css';
 
-const Option = ({ option, id, handleCheckedAnswer }) => {
+const Option = ({ option, id, }) => {
+    const handleCheckedAnswer = useContext(HandleCheckedAnswerContext)
 
     return (
         <div className='col-md-6'>

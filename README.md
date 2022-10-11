@@ -12,7 +12,7 @@ This project was created by [Md. Nuruddin Adnan](https://github.com/Nuruddin-Adn
 
 ## Technology used
 
-### `React`, `React router dom`, `Bootstrap`, `rechart`, `fontawsome`, `react-toastify`
+### `React`, `React router dom`, `Bootstrap`, `rechart`, `fontawesome`, `react-toastify`
 
 ## Features
 
