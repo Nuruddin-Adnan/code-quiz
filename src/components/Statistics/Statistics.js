@@ -8,10 +8,6 @@ const Statistics = () => {
     const chartData = quizsTopics.data;
     const COLORS = ['#00C49F', '#FFBB28', '#0088FE', '#FF8042'];
 
-
-    console.log(chartData);
-
-
     return (
         <div className='container col-xl-6 my-5' style={{ height: '400px' }}>
             <h2 className='text-center text-info'>Quiz chart</h2>
