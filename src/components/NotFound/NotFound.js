@@ -9,7 +9,7 @@ const NotFound = () => {
             <div className=' text-center'>
                 <FontAwesomeIcon icon={faFaceSadCry} className='text-muted' style={{ fontSize: '5rem' }} />
                 <i class="fa-solid fa-face-head-bandage"></i>
-                <h1>404</h1>
+                <h1 className='mt-4'>404</h1>
                 <h5>Page not found</h5>
                 <p>The page you are looking for does not exist</p>
                 <Link to='/' className='btn btn-lg btn-primary'>Home page</Link>
