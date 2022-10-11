@@ -4,7 +4,7 @@ This project was created by [Md. Nuruddin Adnan](https://github.com/Nuruddin-Adn
 
 ## Live Link
 
-[http://localhost:3000](http://localhost:3000)
+[https://assignment-9-code-quiz-react.netlify.app/](https://assignment-9-code-quiz-react.netlify.app/)
 
 ## Github Link
 
