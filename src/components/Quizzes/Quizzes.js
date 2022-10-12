@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -43,7 +43,7 @@ const Quizzes = () => {
                 <div className="col-lg-8 mx-auto">
                     <h2 className='text-center text-info mb-4'>Quiz of {name}({questions.length})</h2>
                     <div className="quiz-container">
-                        {questions.map(question => <Quiz key={question.id} question={question}></Quiz>)}
+                        {questions.map((question, index) => <Quiz key={question.id} question={question} index={index}></Quiz>)}
                     </div>
                 </div>
                 <ToastContainer />

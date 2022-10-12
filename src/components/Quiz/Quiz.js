@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import Option from '../Option/Option';
 
-const Quiz = ({ question }) => {
+const Quiz = ({ question, index }) => {
     const { id, options, correctAnswer } = question;
     const mainQuestion = ((question.question).replace('<p>', '')).replace('</p>', '')
 
@@ -16,8 +16,8 @@ const Quiz = ({ question }) => {
     return (
         <div className='card mb-5 border'>
             <div className="card-body position-relative">
-                <h5 className="fw-semibold text-info px-md-5 px-4 mb-3">Quiz 1: {mainQuestion}</h5>
-                <button className='btn position-absolute top-0 end-0 fs-5' onClick={showCorrectAns} style={{ color: '#1e82ab' }}>
+                <h5 className="fw-semibold text-info px-md-5 px-4 mb-3">Quiz {index + 1}: {mainQuestion}</h5>
+                <button type='button' className='btn position-absolute top-0 end-0 fs-5' onClick={showCorrectAns} style={{ color: '#1e82ab' }}>
                     <FontAwesomeIcon icon={correctAns ? faEyeSlash : faEye}></FontAwesomeIcon>
                 </button>
                 <div className="option-container row g-3">
